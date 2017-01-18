@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+.thumbnail {
+        position: relative;
+        padding: 0px;
+        margin-bottom: 20px;
+    }
+
+        .thumbnail:hover {
+            background-color: #69f;
+        }
+    
+	.thumbnail:hover {
+            background-color: #69f;
+        }
+    .votes {
+        font-size: 47px;
+        color: #197BB5;
+        padding: 10px;
+    }
+
+    .thumbnail img {
+        width: 100%;
+    }
+	h1,h2,h3{
+		font-family: 'Josefin Sans';
+	}
+	.col-sm-12 h2{
+		font-family: 'Josefin Sans';
+		font-weight: 700;
+	}
+	
+@media (max-width: 360px){
+.table {
+	font-size:8px;
+		
+}
+
+}

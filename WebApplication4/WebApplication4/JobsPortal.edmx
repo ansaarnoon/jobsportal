@@ -1,0 +1,1525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="JobsPortalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Candidate">
+          <Key>
+            <PropertyRef Name="Candidate_id" />
+          </Key>
+          <Property Name="Candidate_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="First_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Last_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email_Id" Type="nvarchar" MaxLength="100" />
+          <Property Name="DOB" Type="nvarchar" MaxLength="100" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nationality" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mobile_No" Type="int" />
+          <Property Name="Functional_Area" Type="nvarchar" MaxLength="100" />
+          <Property Name="Current_Sallery" Type="int" />
+          <Property Name="Education_level" Type="nvarchar" MaxLength="100" />
+          <Property Name="Experience_Level" Type="nvarchar" MaxLength="100" />
+          <Property Name="Desired_Salary_from" Type="nchar" MaxLength="10" />
+          <Property Name="Desired_Salary_to" Type="nvarchar" MaxLength="100" />
+          <Property Name="Current_Carrier_Level" Type="nvarchar" MaxLength="100" />
+          <Property Name="Religion" Type="nvarchar" MaxLength="50" />
+          <Property Name="Birht_Place" Type="nvarchar" MaxLength="100" />
+          <Property Name="Marital_Status" Type="nvarchar" MaxLength="100" />
+          <Property Name="Father_Namer" Type="nvarchar" MaxLength="100" />
+          <Property Name="Postal_Addres" Type="nvarchar" MaxLength="100" />
+          <Property Name="Permanent_Addres" Type="nvarchar" MaxLength="100" />
+          <Property Name="CNIC" Type="nvarchar" MaxLength="100" />
+          <Property Name="Driving_Licience" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Candidate_Achievements">
+          <Key>
+            <PropertyRef Name="Achievements_id" />
+          </Key>
+          <Property Name="Achievements_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Achievement_title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Descritpion" Type="nvarchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="Candidate_Courses">
+          <Key>
+            <PropertyRef Name="Course_id" />
+          </Key>
+          <Property Name="Course_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Course_Type" Type="nvarchar" MaxLength="200" />
+          <Property Name="Course_Start_Date" Type="nvarchar" MaxLength="100" />
+          <Property Name="Course_End_Date" Type="nchar" MaxLength="10" />
+          <Property Name="Institute" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Candidate_Cover_Letter">
+          <Key>
+            <PropertyRef Name="Cover_Letter_id" />
+          </Key>
+          <Property Name="Cover_Letter_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_CV_Id" Type="int" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Cover_Letter_file" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Candidate_CV">
+          <Key>
+            <PropertyRef Name="Candidate_CV_Id" />
+          </Key>
+          <Property Name="Candidate_CV_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="CV_File" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Candidate_desired_city">
+          <Key>
+            <PropertyRef Name="Desired_city_id" />
+          </Key>
+          <Property Name="Desired_city_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Desired_city_name" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Candidate_Education">
+          <Key>
+            <PropertyRef Name="Education_Id" />
+          </Key>
+          <Property Name="Education_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Degree_Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Degree_Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Degree_Level" Type="nvarchar" MaxLength="100" />
+          <Property Name="Institute" Type="nvarchar" MaxLength="200" />
+          <Property Name="Result_Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Start_Date" Type="nvarchar" MaxLength="100" />
+          <Property Name="Completion_Date" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Candidate_Education_Major_Subjects">
+          <Key>
+            <PropertyRef Name="Major_Subject_id" />
+          </Key>
+          <Property Name="Major_Subject_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Education_Id" Type="int" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Major_Subject" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Candidate_Experience">
+          <Key>
+            <PropertyRef Name="Experience_id" />
+          </Key>
+          <Property Name="Experience_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Company" Type="nvarchar" MaxLength="100" />
+          <Property Name="Locaton" Type="nvarchar" MaxLength="300" />
+          <Property Name="Start_From_date" Type="nvarchar" MaxLength="100" />
+          <Property Name="End_Date" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="nvarchar" MaxLength="100" />
+          <Property Name="Designation" Type="nvarchar" MaxLength="100" />
+          <Property Name="Salary" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Candidate_Feedback">
+          <Key>
+            <PropertyRef Name="Feedback_id" />
+          </Key>
+          <Property Name="Feedback_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="feedback_type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Feedback_Description" Type="nvarchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="Candidate_Jobs_Appllied">
+          <Key>
+            <PropertyRef Name="Jobs_Applied_id" />
+          </Key>
+          <Property Name="Jobs_Applied_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Vacancy_id" Type="int" />
+          <Property Name="Status" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Date_Applied" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Candidate_Jobs_Types_Looking">
+          <Key>
+            <PropertyRef Name="Jobs_type_id" />
+          </Key>
+          <Property Name="Jobs_type_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Jobs_Title_looking" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Candidate_Languages">
+          <Key>
+            <PropertyRef Name="Language_id" />
+          </Key>
+          <Property Name="Language_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Language_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Proficiency" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Candidate_Professional_Skills">
+          <Key>
+            <PropertyRef Name="Professional_Skills_id" />
+          </Key>
+          <Property Name="Professional_Skills_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Skill_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Experience" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Candidate_Projects">
+          <Key>
+            <PropertyRef Name="Project_id" />
+          </Key>
+          <Property Name="Project_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Project_Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Project_Url" Type="nvarchar" MaxLength="200" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Assocication_with" Type="nvarchar" MaxLength="100" />
+          <Property Name="Project_Start_date" Type="nvarchar" MaxLength="100" />
+          <Property Name="Project_End_Date" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Candidate_Publications">
+          <Key>
+            <PropertyRef Name="Publication_id" />
+          </Key>
+          <Property Name="Publication_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Publication_title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Author" Type="nvarchar" MaxLength="100" />
+          <Property Name="Publish_date" Type="nvarchar" MaxLength="100" />
+          <Property Name="Desciption" Type="nvarchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="Candidate_Query">
+          <Key>
+            <PropertyRef Name="Query_id" />
+          </Key>
+          <Property Name="Query_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Message" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="Candidate_Saved_Jobs">
+          <Key>
+            <PropertyRef Name="Saved_Job_id" />
+          </Key>
+          <Property Name="Saved_Job_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Vacancy_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Candidate_Specilization">
+          <Key>
+            <PropertyRef Name="Specilization_id" />
+          </Key>
+          <Property Name="Specilization_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Specilization_title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Specilization_Description" Type="nvarchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="Company_Admin">
+          <Key>
+            <PropertyRef Name="Company_Admin_id" />
+          </Key>
+          <Property Name="Company_Admin_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Admin_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Admin_Email" Type="nvarchar" MaxLength="200" />
+          <Property Name="Password" Type="nvarchar" MaxLength="200" />
+          <Property Name="Phone_No" Type="int" />
+          <Property Name="Vouchar_No" Type="int" />
+          <Property Name="Admin_Desingnation" Type="nvarchar" MaxLength="200" />
+          <Property Name="Status" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Company_Advertisments">
+          <Key>
+            <PropertyRef Name="Advertisement_id" />
+          </Key>
+          <Property Name="Advertisement_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Advertisement_title" Type="nvarchar" MaxLength="200" />
+          <Property Name="AD_Date_Submission" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ad_Expiry_Date" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Is_Allowed" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Company_Education_Required">
+          <Key>
+            <PropertyRef Name="Education_Required_id" />
+          </Key>
+          <Property Name="Education_Required_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Advertisement_id" Type="int" />
+          <Property Name="Vancancy_id" Type="int" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Education" Type="nchar" MaxLength="10" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Company_Files">
+          <Key>
+            <PropertyRef Name="Company_Doc_id" />
+          </Key>
+          <Property Name="Company_Doc_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Company_Doc" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Company_FunctionalArea">
+          <Key>
+            <PropertyRef Name="Company_FunctionalArea_id" />
+          </Key>
+          <Property Name="Company_FunctionalArea_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Company_FunctionalArea" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Company_Industry">
+          <Key>
+            <PropertyRef Name="Company_Industry_id" />
+          </Key>
+          <Property Name="Company_Industry_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Industry" Type="int" />
+        </EntityType>
+        <EntityType Name="Company_Interview">
+          <Key>
+            <PropertyRef Name="Interview_id" />
+          </Key>
+          <Property Name="Interview_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Compnay_id" Type="int" />
+          <Property Name="Company_Vacancy_id" Type="int" />
+          <Property Name="Advertisement_id" Type="int" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Status" Type="nvarchar" MaxLength="100" />
+          <Property Name="Interview_Remarks" Type="nvarchar" MaxLength="500" />
+          <Property Name="Is_Selected" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Company_jobs_realted_skills">
+          <Key>
+            <PropertyRef Name="Company_jobs_related_skil_id" />
+          </Key>
+          <Property Name="Company_jobs_related_skil_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Skill_title" Type="nvarchar" MaxLength="520" />
+          <Property Name="skills_discription" Type="nvarchar" MaxLength="500" />
+          <Property Name="Company_Vacancy_id" Type="int" />
+          <Property Name="Advertisement_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Company_Locations">
+          <Key>
+            <PropertyRef Name="Company_Location_id" />
+          </Key>
+          <Property Name="Company_Location_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Country" Type="nvarchar" MaxLength="100" />
+          <Property Name="City" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Company_phone_No">
+          <Key>
+            <PropertyRef Name="Company_phone_id" />
+          </Key>
+          <Property Name="Company_phone_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_Location_id" Type="int" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Phone_no" Type="int" />
+          <Property Name="Fax_no" Type="int" />
+        </EntityType>
+        <EntityType Name="Company_Profile">
+          <Key>
+            <PropertyRef Name="Company_id" />
+          </Key>
+          <Property Name="Company_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Company_Since" Type="nvarchar" MaxLength="50" />
+          <Property Name="Company_Website" Type="nvarchar" MaxLength="500" />
+          <Property Name="Company_Employess" Type="nvarchar" MaxLength="200" />
+          <Property Name="Company_Description" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Company_Question_Choices">
+          <Key>
+            <PropertyRef Name="Qeustion_Choices_id" />
+          </Key>
+          <Property Name="Qeustion_Choices_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_Vacancy_id" Type="int" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Advertisement_id" Type="int" />
+          <Property Name="Vacancy_questions_id" Type="int" />
+          <Property Name="Choice" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="Company_Selected_Recieved_Applications">
+          <Key>
+            <PropertyRef Name="Selected_Recieved_Applic_id" />
+          </Key>
+          <Property Name="Selected_Recieved_Applic_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Advertisement_id" Type="int" />
+          <Property Name="Company_Vacancy_id" Type="int" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Selected_Date" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Company_Services">
+          <Key>
+            <PropertyRef Name="Company_Service_id" />
+          </Key>
+          <Property Name="Company_Service_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Service_Type" Type="nvarchar" MaxLength="200" />
+          <Property Name="Service_Discritpion" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Company_SharedAdd_Media">
+          <Key>
+            <PropertyRef Name="Media_Shared_id" />
+          </Key>
+          <Property Name="Media_Shared_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Media" Type="nvarchar" MaxLength="300" />
+          <Property Name="Link" Type="nvarchar" MaxLength="300" />
+          <Property Name="Shared_Date" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Company_ShortListed">
+          <Key>
+            <PropertyRef Name="ShortListes_Id" />
+          </Key>
+          <Property Name="ShortListes_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Company_Vacancy_id" Type="int" />
+          <Property Name="Advertisement_id" Type="int" />
+          <Property Name="Shorlisted_Date" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Company_Tests">
+          <Key>
+            <PropertyRef Name="Test_id" />
+          </Key>
+          <Property Name="Test_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Compnay_id" Type="int" />
+          <Property Name="Company_Vacancy_id" Type="int" />
+          <Property Name="Advertisement_id" Type="int" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Test_Desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="Is_Selected" Type="int" />
+          <Property Name="Total_Marks" Type="int" />
+        </EntityType>
+        <EntityType Name="Company_Vacancies">
+          <Key>
+            <PropertyRef Name="Company_Vacancy_id" />
+          </Key>
+          <Property Name="Company_Vacancy_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Advertisement_id" Type="int" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Discription" Type="nvarchar" MaxLength="200" />
+          <Property Name="Vacancy_title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Career_level" Type="nvarchar" MaxLength="200" />
+          <Property Name="Vacancy_No_of_Postions" Type="int" />
+          <Property Name="Salary_Range_from" Type="int" />
+          <Property Name="Salary_Range_to" Type="int" />
+          <Property Name="Functional_Area" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Company_Vacancy_Locations">
+          <Key>
+            <PropertyRef Name="Vacancy_location_id" />
+          </Key>
+          <Property Name="Vacancy_location_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Advertisement_id" Type="int" />
+          <Property Name="Company_Vacancy_id" Type="int" />
+          <Property Name="Vacancy_city" Type="nvarchar" MaxLength="300" />
+          <Property Name="Vacancy_Country" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Company_Vacancy_Questions">
+          <Key>
+            <PropertyRef Name="Vacancy_questions_id" />
+          </Key>
+          <Property Name="Vacancy_questions_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Advertisement_id" Type="int" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Company_Vacancy_id" Type="int" />
+          <Property Name="Question" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Answer" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Compnay_FinalShortListed">
+          <Key>
+            <PropertyRef Name="Final_ShortListed_id" />
+          </Key>
+          <Property Name="Final_ShortListed_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_id" Type="int" />
+          <Property Name="Candidate_id" Type="int" />
+          <Property Name="Company_Vacancy_id" Type="int" />
+          <Property Name="Advertisement_id" Type="int" />
+          <Property Name="ShortListes_Id" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'JobsPortal.dbo.Country' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="CountryName" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryName" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="JobsPortalModelStoreContainer">
+          <EntitySet Name="Candidate" EntityType="Self.Candidate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_Achievements" EntityType="Self.Candidate_Achievements" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_Courses" EntityType="Self.Candidate_Courses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_Cover_Letter" EntityType="Self.Candidate_Cover_Letter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_CV" EntityType="Self.Candidate_CV" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_desired_city" EntityType="Self.Candidate_desired_city" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_Education" EntityType="Self.Candidate_Education" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_Education_Major_Subjects" EntityType="Self.Candidate_Education_Major_Subjects" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_Experience" EntityType="Self.Candidate_Experience" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_Feedback" EntityType="Self.Candidate_Feedback" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_Jobs_Appllied" EntityType="Self.Candidate_Jobs_Appllied" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_Jobs_Types_Looking" EntityType="Self.Candidate_Jobs_Types_Looking" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_Languages" EntityType="Self.Candidate_Languages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_Professional_Skills" EntityType="Self.Candidate_Professional_Skills" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_Projects" EntityType="Self.Candidate_Projects" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_Publications" EntityType="Self.Candidate_Publications" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_Query" EntityType="Self.Candidate_Query" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_Saved_Jobs" EntityType="Self.Candidate_Saved_Jobs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate_Specilization" EntityType="Self.Candidate_Specilization" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_Admin" EntityType="Self.Company_Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_Advertisments" EntityType="Self.Company_Advertisments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_Education_Required" EntityType="Self.Company_Education_Required" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_Files" EntityType="Self.Company_Files" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_FunctionalArea" EntityType="Self.Company_FunctionalArea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_Industry" EntityType="Self.Company_Industry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_Interview" EntityType="Self.Company_Interview" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_jobs_realted_skills" EntityType="Self.Company_jobs_realted_skills" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_Locations" EntityType="Self.Company_Locations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_phone_No" EntityType="Self.Company_phone_No" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_Profile" EntityType="Self.Company_Profile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_Question_Choices" EntityType="Self.Company_Question_Choices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_Selected_Recieved_Applications" EntityType="Self.Company_Selected_Recieved_Applications" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_Services" EntityType="Self.Company_Services" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_SharedAdd_Media" EntityType="Self.Company_SharedAdd_Media" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_ShortListed" EntityType="Self.Company_ShortListed" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_Tests" EntityType="Self.Company_Tests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_Vacancies" EntityType="Self.Company_Vacancies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_Vacancy_Locations" EntityType="Self.Company_Vacancy_Locations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company_Vacancy_Questions" EntityType="Self.Company_Vacancy_Questions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Compnay_FinalShortListed" EntityType="Self.Compnay_FinalShortListed" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Country" EntityType="Self.Country" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Country].[ID] AS [ID], 
+[Country].[CountryName] AS [CountryName]
+FROM [dbo].[Country] AS [Country]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JobsPortalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Candidate">
+          <Key>
+            <PropertyRef Name="Candidate_id" />
+          </Key>
+          <Property Name="Candidate_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="First_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Last_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email_Id" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nationality" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile_No" Type="Int32" />
+          <Property Name="Functional_Area" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Current_Sallery" Type="Int32" />
+          <Property Name="Education_level" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Experience_Level" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Desired_Salary_from" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Desired_Salary_to" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Current_Carrier_Level" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Religion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Birht_Place" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Marital_Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Father_Namer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Postal_Addres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Permanent_Addres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CNIC" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Driving_Licience" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_Achievements">
+          <Key>
+            <PropertyRef Name="Achievements_id" />
+          </Key>
+          <Property Name="Achievements_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Achievement_title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Descritpion" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_Courses">
+          <Key>
+            <PropertyRef Name="Course_id" />
+          </Key>
+          <Property Name="Course_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Course_Type" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Course_Start_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Course_End_Date" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Institute" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_Cover_Letter">
+          <Key>
+            <PropertyRef Name="Cover_Letter_id" />
+          </Key>
+          <Property Name="Cover_Letter_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_CV_Id" Type="Int32" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Cover_Letter_file" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_CV">
+          <Key>
+            <PropertyRef Name="Candidate_CV_Id" />
+          </Key>
+          <Property Name="Candidate_CV_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="CV_File" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_desired_city">
+          <Key>
+            <PropertyRef Name="Desired_city_id" />
+          </Key>
+          <Property Name="Desired_city_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Desired_city_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_Education">
+          <Key>
+            <PropertyRef Name="Education_Id" />
+          </Key>
+          <Property Name="Education_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Degree_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Degree_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Degree_Level" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Institute" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Result_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Start_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Completion_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_Education_Major_Subjects">
+          <Key>
+            <PropertyRef Name="Major_Subject_id" />
+          </Key>
+          <Property Name="Major_Subject_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Education_Id" Type="Int32" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Major_Subject" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_Experience">
+          <Key>
+            <PropertyRef Name="Experience_id" />
+          </Key>
+          <Property Name="Experience_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Company" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Locaton" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Start_From_date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="End_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Designation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Salary" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_Feedback">
+          <Key>
+            <PropertyRef Name="Feedback_id" />
+          </Key>
+          <Property Name="Feedback_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="feedback_type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Feedback_Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_Jobs_Appllied">
+          <Key>
+            <PropertyRef Name="Jobs_Applied_id" />
+          </Key>
+          <Property Name="Jobs_Applied_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Vacancy_id" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Date_Applied" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_Jobs_Types_Looking">
+          <Key>
+            <PropertyRef Name="Jobs_type_id" />
+          </Key>
+          <Property Name="Jobs_type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Jobs_Title_looking" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_Languages">
+          <Key>
+            <PropertyRef Name="Language_id" />
+          </Key>
+          <Property Name="Language_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Language_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Proficiency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_Professional_Skills">
+          <Key>
+            <PropertyRef Name="Professional_Skills_id" />
+          </Key>
+          <Property Name="Professional_Skills_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Skill_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Experience" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_Projects">
+          <Key>
+            <PropertyRef Name="Project_id" />
+          </Key>
+          <Property Name="Project_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Project_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="Project_Url" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Assocication_with" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Project_Start_date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Project_End_Date" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_Publications">
+          <Key>
+            <PropertyRef Name="Publication_id" />
+          </Key>
+          <Property Name="Publication_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Publication_title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Publish_date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Desciption" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_Query">
+          <Key>
+            <PropertyRef Name="Query_id" />
+          </Key>
+          <Property Name="Query_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Candidate_Saved_Jobs">
+          <Key>
+            <PropertyRef Name="Saved_Job_id" />
+          </Key>
+          <Property Name="Saved_Job_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Vacancy_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Candidate_Specilization">
+          <Key>
+            <PropertyRef Name="Specilization_id" />
+          </Key>
+          <Property Name="Specilization_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Specilization_title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Specilization_Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Company_Admin">
+          <Key>
+            <PropertyRef Name="Company_Admin_id" />
+          </Key>
+          <Property Name="Company_Admin_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Admin_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Admin_Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_No" Type="Int32" />
+          <Property Name="Vouchar_No" Type="Int32" />
+          <Property Name="Admin_Desingnation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Company_Advertisments">
+          <Key>
+            <PropertyRef Name="Advertisement_id" />
+          </Key>
+          <Property Name="Advertisement_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Advertisement_title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AD_Date_Submission" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ad_Expiry_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Is_Allowed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Company_Education_Required">
+          <Key>
+            <PropertyRef Name="Education_Required_id" />
+          </Key>
+          <Property Name="Education_Required_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Advertisement_id" Type="Int32" />
+          <Property Name="Vancancy_id" Type="Int32" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Education" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Company_Files">
+          <Key>
+            <PropertyRef Name="Company_Doc_id" />
+          </Key>
+          <Property Name="Company_Doc_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Company_Doc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Company_FunctionalArea">
+          <Key>
+            <PropertyRef Name="Company_FunctionalArea_id" />
+          </Key>
+          <Property Name="Company_FunctionalArea_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Company_FunctionalArea1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Company_Industry">
+          <Key>
+            <PropertyRef Name="Company_Industry_id" />
+          </Key>
+          <Property Name="Company_Industry_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Industry" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Company_Interview">
+          <Key>
+            <PropertyRef Name="Interview_id" />
+          </Key>
+          <Property Name="Interview_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Compnay_id" Type="Int32" />
+          <Property Name="Company_Vacancy_id" Type="Int32" />
+          <Property Name="Advertisement_id" Type="Int32" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Interview_Remarks" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Is_Selected" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Company_jobs_realted_skills">
+          <Key>
+            <PropertyRef Name="Company_jobs_related_skil_id" />
+          </Key>
+          <Property Name="Company_jobs_related_skil_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Skill_title" Type="String" MaxLength="520" FixedLength="false" Unicode="true" />
+          <Property Name="skills_discription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Company_Vacancy_id" Type="Int32" />
+          <Property Name="Advertisement_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Company_Locations">
+          <Key>
+            <PropertyRef Name="Company_Location_id" />
+          </Key>
+          <Property Name="Company_Location_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Company_phone_No">
+          <Key>
+            <PropertyRef Name="Company_phone_id" />
+          </Key>
+          <Property Name="Company_phone_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_Location_id" Type="Int32" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Phone_no" Type="Int32" />
+          <Property Name="Fax_no" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Company_Profile">
+          <Key>
+            <PropertyRef Name="Company_id" />
+          </Key>
+          <Property Name="Company_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Company_Since" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Company_Website" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Company_Employess" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Company_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Company_Question_Choices">
+          <Key>
+            <PropertyRef Name="Qeustion_Choices_id" />
+          </Key>
+          <Property Name="Qeustion_Choices_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_Vacancy_id" Type="Int32" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Advertisement_id" Type="Int32" />
+          <Property Name="Vacancy_questions_id" Type="Int32" />
+          <Property Name="Choice" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Company_Selected_Recieved_Applications">
+          <Key>
+            <PropertyRef Name="Selected_Recieved_Applic_id" />
+          </Key>
+          <Property Name="Selected_Recieved_Applic_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Advertisement_id" Type="Int32" />
+          <Property Name="Company_Vacancy_id" Type="Int32" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Selected_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Company_Services">
+          <Key>
+            <PropertyRef Name="Company_Service_id" />
+          </Key>
+          <Property Name="Company_Service_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Service_Type" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Service_Discritpion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Company_SharedAdd_Media">
+          <Key>
+            <PropertyRef Name="Media_Shared_id" />
+          </Key>
+          <Property Name="Media_Shared_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Media" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Link" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Shared_Date" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Company_ShortListed">
+          <Key>
+            <PropertyRef Name="ShortListes_Id" />
+          </Key>
+          <Property Name="ShortListes_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Company_Vacancy_id" Type="Int32" />
+          <Property Name="Advertisement_id" Type="Int32" />
+          <Property Name="Shorlisted_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Company_Tests">
+          <Key>
+            <PropertyRef Name="Test_id" />
+          </Key>
+          <Property Name="Test_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Compnay_id" Type="Int32" />
+          <Property Name="Company_Vacancy_id" Type="Int32" />
+          <Property Name="Advertisement_id" Type="Int32" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Test_Desc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Is_Selected" Type="Int32" />
+          <Property Name="Total_Marks" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Company_Vacancies">
+          <Key>
+            <PropertyRef Name="Company_Vacancy_id" />
+          </Key>
+          <Property Name="Company_Vacancy_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Advertisement_id" Type="Int32" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Discription" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Vacancy_title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Career_level" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Vacancy_No_of_Postions" Type="Int32" />
+          <Property Name="Salary_Range_from" Type="Int32" />
+          <Property Name="Salary_Range_to" Type="Int32" />
+          <Property Name="Functional_Area" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Company_Vacancy_Locations">
+          <Key>
+            <PropertyRef Name="Vacancy_location_id" />
+          </Key>
+          <Property Name="Vacancy_location_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Advertisement_id" Type="Int32" />
+          <Property Name="Company_Vacancy_id" Type="Int32" />
+          <Property Name="Vacancy_city" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Vacancy_Country" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Company_Vacancy_Questions">
+          <Key>
+            <PropertyRef Name="Vacancy_questions_id" />
+          </Key>
+          <Property Name="Vacancy_questions_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Advertisement_id" Type="Int32" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Company_Vacancy_id" Type="Int32" />
+          <Property Name="Question" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Answer" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Compnay_FinalShortListed">
+          <Key>
+            <PropertyRef Name="Final_ShortListed_id" />
+          </Key>
+          <Property Name="Final_ShortListed_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_id" Type="Int32" />
+          <Property Name="Candidate_id" Type="Int32" />
+          <Property Name="Company_Vacancy_id" Type="Int32" />
+          <Property Name="Advertisement_id" Type="Int32" />
+          <Property Name="ShortListes_Id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="CountryName" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="JobsPortalEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Candidates" EntityType="Self.Candidate" />
+          <EntitySet Name="Candidate_Achievements" EntityType="Self.Candidate_Achievements" />
+          <EntitySet Name="Candidate_Courses" EntityType="Self.Candidate_Courses" />
+          <EntitySet Name="Candidate_Cover_Letter" EntityType="Self.Candidate_Cover_Letter" />
+          <EntitySet Name="Candidate_CV" EntityType="Self.Candidate_CV" />
+          <EntitySet Name="Candidate_desired_city" EntityType="Self.Candidate_desired_city" />
+          <EntitySet Name="Candidate_Education" EntityType="Self.Candidate_Education" />
+          <EntitySet Name="Candidate_Education_Major_Subjects" EntityType="Self.Candidate_Education_Major_Subjects" />
+          <EntitySet Name="Candidate_Experience" EntityType="Self.Candidate_Experience" />
+          <EntitySet Name="Candidate_Feedback" EntityType="Self.Candidate_Feedback" />
+          <EntitySet Name="Candidate_Jobs_Appllied" EntityType="Self.Candidate_Jobs_Appllied" />
+          <EntitySet Name="Candidate_Jobs_Types_Looking" EntityType="Self.Candidate_Jobs_Types_Looking" />
+          <EntitySet Name="Candidate_Languages" EntityType="Self.Candidate_Languages" />
+          <EntitySet Name="Candidate_Professional_Skills" EntityType="Self.Candidate_Professional_Skills" />
+          <EntitySet Name="Candidate_Projects" EntityType="Self.Candidate_Projects" />
+          <EntitySet Name="Candidate_Publications" EntityType="Self.Candidate_Publications" />
+          <EntitySet Name="Candidate_Query" EntityType="Self.Candidate_Query" />
+          <EntitySet Name="Candidate_Saved_Jobs" EntityType="Self.Candidate_Saved_Jobs" />
+          <EntitySet Name="Candidate_Specilization" EntityType="Self.Candidate_Specilization" />
+          <EntitySet Name="Company_Admin" EntityType="Self.Company_Admin" />
+          <EntitySet Name="Company_Advertisments" EntityType="Self.Company_Advertisments" />
+          <EntitySet Name="Company_Education_Required" EntityType="Self.Company_Education_Required" />
+          <EntitySet Name="Company_Files" EntityType="Self.Company_Files" />
+          <EntitySet Name="Company_FunctionalArea" EntityType="Self.Company_FunctionalArea" />
+          <EntitySet Name="Company_Industry" EntityType="Self.Company_Industry" />
+          <EntitySet Name="Company_Interview" EntityType="Self.Company_Interview" />
+          <EntitySet Name="Company_jobs_realted_skills" EntityType="Self.Company_jobs_realted_skills" />
+          <EntitySet Name="Company_Locations" EntityType="Self.Company_Locations" />
+          <EntitySet Name="Company_phone_No" EntityType="Self.Company_phone_No" />
+          <EntitySet Name="Company_Profile" EntityType="Self.Company_Profile" />
+          <EntitySet Name="Company_Question_Choices" EntityType="Self.Company_Question_Choices" />
+          <EntitySet Name="Company_Selected_Recieved_Applications" EntityType="Self.Company_Selected_Recieved_Applications" />
+          <EntitySet Name="Company_Services" EntityType="Self.Company_Services" />
+          <EntitySet Name="Company_SharedAdd_Media" EntityType="Self.Company_SharedAdd_Media" />
+          <EntitySet Name="Company_ShortListed" EntityType="Self.Company_ShortListed" />
+          <EntitySet Name="Company_Tests" EntityType="Self.Company_Tests" />
+          <EntitySet Name="Company_Vacancies" EntityType="Self.Company_Vacancies" />
+          <EntitySet Name="Company_Vacancy_Locations" EntityType="Self.Company_Vacancy_Locations" />
+          <EntitySet Name="Company_Vacancy_Questions" EntityType="Self.Company_Vacancy_Questions" />
+          <EntitySet Name="Compnay_FinalShortListed" EntityType="Self.Compnay_FinalShortListed" />
+          <EntitySet Name="Countries" EntityType="Self.Country" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="JobsPortalModelStoreContainer" CdmEntityContainer="JobsPortalEntities">
+          <EntitySetMapping Name="Candidates">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate">
+              <MappingFragment StoreEntitySet="Candidate">
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="Email_Id" ColumnName="Email_Id" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+                <ScalarProperty Name="Functional_Area" ColumnName="Functional_Area" />
+                <ScalarProperty Name="Current_Sallery" ColumnName="Current_Sallery" />
+                <ScalarProperty Name="Education_level" ColumnName="Education_level" />
+                <ScalarProperty Name="Experience_Level" ColumnName="Experience_Level" />
+                <ScalarProperty Name="Desired_Salary_from" ColumnName="Desired_Salary_from" />
+                <ScalarProperty Name="Desired_Salary_to" ColumnName="Desired_Salary_to" />
+                <ScalarProperty Name="Current_Carrier_Level" ColumnName="Current_Carrier_Level" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="Birht_Place" ColumnName="Birht_Place" />
+                <ScalarProperty Name="Marital_Status" ColumnName="Marital_Status" />
+                <ScalarProperty Name="Father_Namer" ColumnName="Father_Namer" />
+                <ScalarProperty Name="Postal_Addres" ColumnName="Postal_Addres" />
+                <ScalarProperty Name="Permanent_Addres" ColumnName="Permanent_Addres" />
+                <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+                <ScalarProperty Name="Driving_Licience" ColumnName="Driving_Licience" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_Achievements">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Achievements">
+              <MappingFragment StoreEntitySet="Candidate_Achievements">
+                <ScalarProperty Name="Achievements_id" ColumnName="Achievements_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Achievement_title" ColumnName="Achievement_title" />
+                <ScalarProperty Name="Descritpion" ColumnName="Descritpion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_Courses">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Courses">
+              <MappingFragment StoreEntitySet="Candidate_Courses">
+                <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Course_Type" ColumnName="Course_Type" />
+                <ScalarProperty Name="Course_Start_Date" ColumnName="Course_Start_Date" />
+                <ScalarProperty Name="Course_End_Date" ColumnName="Course_End_Date" />
+                <ScalarProperty Name="Institute" ColumnName="Institute" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_Cover_Letter">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Cover_Letter">
+              <MappingFragment StoreEntitySet="Candidate_Cover_Letter">
+                <ScalarProperty Name="Cover_Letter_id" ColumnName="Cover_Letter_id" />
+                <ScalarProperty Name="Candidate_CV_Id" ColumnName="Candidate_CV_Id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Cover_Letter_file" ColumnName="Cover_Letter_file" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_CV">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_CV">
+              <MappingFragment StoreEntitySet="Candidate_CV">
+                <ScalarProperty Name="Candidate_CV_Id" ColumnName="Candidate_CV_Id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="CV_File" ColumnName="CV_File" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_desired_city">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_desired_city">
+              <MappingFragment StoreEntitySet="Candidate_desired_city">
+                <ScalarProperty Name="Desired_city_id" ColumnName="Desired_city_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Desired_city_name" ColumnName="Desired_city_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_Education">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Education">
+              <MappingFragment StoreEntitySet="Candidate_Education">
+                <ScalarProperty Name="Education_Id" ColumnName="Education_Id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Degree_Title" ColumnName="Degree_Title" />
+                <ScalarProperty Name="Degree_Type" ColumnName="Degree_Type" />
+                <ScalarProperty Name="Degree_Level" ColumnName="Degree_Level" />
+                <ScalarProperty Name="Institute" ColumnName="Institute" />
+                <ScalarProperty Name="Result_Type" ColumnName="Result_Type" />
+                <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+                <ScalarProperty Name="Completion_Date" ColumnName="Completion_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_Education_Major_Subjects">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Education_Major_Subjects">
+              <MappingFragment StoreEntitySet="Candidate_Education_Major_Subjects">
+                <ScalarProperty Name="Major_Subject_id" ColumnName="Major_Subject_id" />
+                <ScalarProperty Name="Education_Id" ColumnName="Education_Id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Major_Subject" ColumnName="Major_Subject" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_Experience">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Experience">
+              <MappingFragment StoreEntitySet="Candidate_Experience">
+                <ScalarProperty Name="Experience_id" ColumnName="Experience_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Locaton" ColumnName="Locaton" />
+                <ScalarProperty Name="Start_From_date" ColumnName="Start_From_date" />
+                <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_Feedback">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Feedback">
+              <MappingFragment StoreEntitySet="Candidate_Feedback">
+                <ScalarProperty Name="Feedback_id" ColumnName="Feedback_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="feedback_type" ColumnName="feedback_type" />
+                <ScalarProperty Name="Feedback_Description" ColumnName="Feedback_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_Jobs_Appllied">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Jobs_Appllied">
+              <MappingFragment StoreEntitySet="Candidate_Jobs_Appllied">
+                <ScalarProperty Name="Jobs_Applied_id" ColumnName="Jobs_Applied_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Vacancy_id" ColumnName="Vacancy_id" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Date_Applied" ColumnName="Date_Applied" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_Jobs_Types_Looking">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Jobs_Types_Looking">
+              <MappingFragment StoreEntitySet="Candidate_Jobs_Types_Looking">
+                <ScalarProperty Name="Jobs_type_id" ColumnName="Jobs_type_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Jobs_Title_looking" ColumnName="Jobs_Title_looking" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_Languages">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Languages">
+              <MappingFragment StoreEntitySet="Candidate_Languages">
+                <ScalarProperty Name="Language_id" ColumnName="Language_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Language_Name" ColumnName="Language_Name" />
+                <ScalarProperty Name="Proficiency" ColumnName="Proficiency" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_Professional_Skills">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Professional_Skills">
+              <MappingFragment StoreEntitySet="Candidate_Professional_Skills">
+                <ScalarProperty Name="Professional_Skills_id" ColumnName="Professional_Skills_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Skill_Name" ColumnName="Skill_Name" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_Projects">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Projects">
+              <MappingFragment StoreEntitySet="Candidate_Projects">
+                <ScalarProperty Name="Project_id" ColumnName="Project_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Project_Title" ColumnName="Project_Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Project_Url" ColumnName="Project_Url" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Assocication_with" ColumnName="Assocication_with" />
+                <ScalarProperty Name="Project_Start_date" ColumnName="Project_Start_date" />
+                <ScalarProperty Name="Project_End_Date" ColumnName="Project_End_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_Publications">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Publications">
+              <MappingFragment StoreEntitySet="Candidate_Publications">
+                <ScalarProperty Name="Publication_id" ColumnName="Publication_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Publication_title" ColumnName="Publication_title" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Publish_date" ColumnName="Publish_date" />
+                <ScalarProperty Name="Desciption" ColumnName="Desciption" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_Query">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Query">
+              <MappingFragment StoreEntitySet="Candidate_Query">
+                <ScalarProperty Name="Query_id" ColumnName="Query_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_Saved_Jobs">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Saved_Jobs">
+              <MappingFragment StoreEntitySet="Candidate_Saved_Jobs">
+                <ScalarProperty Name="Saved_Job_id" ColumnName="Saved_Job_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Vacancy_id" ColumnName="Vacancy_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidate_Specilization">
+            <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Specilization">
+              <MappingFragment StoreEntitySet="Candidate_Specilization">
+                <ScalarProperty Name="Specilization_id" ColumnName="Specilization_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Specilization_title" ColumnName="Specilization_title" />
+                <ScalarProperty Name="Specilization_Description" ColumnName="Specilization_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_Admin">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_Admin">
+              <MappingFragment StoreEntitySet="Company_Admin">
+                <ScalarProperty Name="Company_Admin_id" ColumnName="Company_Admin_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Admin_Name" ColumnName="Admin_Name" />
+                <ScalarProperty Name="Admin_Email" ColumnName="Admin_Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+                <ScalarProperty Name="Vouchar_No" ColumnName="Vouchar_No" />
+                <ScalarProperty Name="Admin_Desingnation" ColumnName="Admin_Desingnation" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_Advertisments">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_Advertisments">
+              <MappingFragment StoreEntitySet="Company_Advertisments">
+                <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Advertisement_title" ColumnName="Advertisement_title" />
+                <ScalarProperty Name="AD_Date_Submission" ColumnName="AD_Date_Submission" />
+                <ScalarProperty Name="Ad_Expiry_Date" ColumnName="Ad_Expiry_Date" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Is_Allowed" ColumnName="Is_Allowed" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_Education_Required">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_Education_Required">
+              <MappingFragment StoreEntitySet="Company_Education_Required">
+                <ScalarProperty Name="Education_Required_id" ColumnName="Education_Required_id" />
+                <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+                <ScalarProperty Name="Vancancy_id" ColumnName="Vancancy_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_Files">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_Files">
+              <MappingFragment StoreEntitySet="Company_Files">
+                <ScalarProperty Name="Company_Doc_id" ColumnName="Company_Doc_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Company_Doc" ColumnName="Company_Doc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_FunctionalArea">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_FunctionalArea">
+              <MappingFragment StoreEntitySet="Company_FunctionalArea">
+                <ScalarProperty Name="Company_FunctionalArea_id" ColumnName="Company_FunctionalArea_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Company_FunctionalArea1" ColumnName="Company_FunctionalArea" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_Industry">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_Industry">
+              <MappingFragment StoreEntitySet="Company_Industry">
+                <ScalarProperty Name="Company_Industry_id" ColumnName="Company_Industry_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Industry" ColumnName="Industry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_Interview">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_Interview">
+              <MappingFragment StoreEntitySet="Company_Interview">
+                <ScalarProperty Name="Interview_id" ColumnName="Interview_id" />
+                <ScalarProperty Name="Compnay_id" ColumnName="Compnay_id" />
+                <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+                <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Interview_Remarks" ColumnName="Interview_Remarks" />
+                <ScalarProperty Name="Is_Selected" ColumnName="Is_Selected" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_jobs_realted_skills">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_jobs_realted_skills">
+              <MappingFragment StoreEntitySet="Company_jobs_realted_skills">
+                <ScalarProperty Name="Company_jobs_related_skil_id" ColumnName="Company_jobs_related_skil_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Skill_title" ColumnName="Skill_title" />
+                <ScalarProperty Name="skills_discription" ColumnName="skills_discription" />
+                <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+                <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_Locations">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_Locations">
+              <MappingFragment StoreEntitySet="Company_Locations">
+                <ScalarProperty Name="Company_Location_id" ColumnName="Company_Location_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_phone_No">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_phone_No">
+              <MappingFragment StoreEntitySet="Company_phone_No">
+                <ScalarProperty Name="Company_phone_id" ColumnName="Company_phone_id" />
+                <ScalarProperty Name="Company_Location_id" ColumnName="Company_Location_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Phone_no" ColumnName="Phone_no" />
+                <ScalarProperty Name="Fax_no" ColumnName="Fax_no" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_Profile">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_Profile">
+              <MappingFragment StoreEntitySet="Company_Profile">
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+                <ScalarProperty Name="Company_Since" ColumnName="Company_Since" />
+                <ScalarProperty Name="Company_Website" ColumnName="Company_Website" />
+                <ScalarProperty Name="Company_Employess" ColumnName="Company_Employess" />
+                <ScalarProperty Name="Company_Description" ColumnName="Company_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_Question_Choices">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_Question_Choices">
+              <MappingFragment StoreEntitySet="Company_Question_Choices">
+                <ScalarProperty Name="Qeustion_Choices_id" ColumnName="Qeustion_Choices_id" />
+                <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+                <ScalarProperty Name="Vacancy_questions_id" ColumnName="Vacancy_questions_id" />
+                <ScalarProperty Name="Choice" ColumnName="Choice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_Selected_Recieved_Applications">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_Selected_Recieved_Applications">
+              <MappingFragment StoreEntitySet="Company_Selected_Recieved_Applications">
+                <ScalarProperty Name="Selected_Recieved_Applic_id" ColumnName="Selected_Recieved_Applic_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+                <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Selected_Date" ColumnName="Selected_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_Services">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_Services">
+              <MappingFragment StoreEntitySet="Company_Services">
+                <ScalarProperty Name="Company_Service_id" ColumnName="Company_Service_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Service_Type" ColumnName="Service_Type" />
+                <ScalarProperty Name="Service_Discritpion" ColumnName="Service_Discritpion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_SharedAdd_Media">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_SharedAdd_Media">
+              <MappingFragment StoreEntitySet="Company_SharedAdd_Media">
+                <ScalarProperty Name="Media_Shared_id" ColumnName="Media_Shared_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Media" ColumnName="Media" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Shared_Date" ColumnName="Shared_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_ShortListed">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_ShortListed">
+              <MappingFragment StoreEntitySet="Company_ShortListed">
+                <ScalarProperty Name="ShortListes_Id" ColumnName="ShortListes_Id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+                <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+                <ScalarProperty Name="Shorlisted_Date" ColumnName="Shorlisted_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_Tests">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_Tests">
+              <MappingFragment StoreEntitySet="Company_Tests">
+                <ScalarProperty Name="Test_id" ColumnName="Test_id" />
+                <ScalarProperty Name="Compnay_id" ColumnName="Compnay_id" />
+                <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+                <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Test_Desc" ColumnName="Test_Desc" />
+                <ScalarProperty Name="Is_Selected" ColumnName="Is_Selected" />
+                <ScalarProperty Name="Total_Marks" ColumnName="Total_Marks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_Vacancies">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_Vacancies">
+              <MappingFragment StoreEntitySet="Company_Vacancies">
+                <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+                <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Discription" ColumnName="Discription" />
+                <ScalarProperty Name="Vacancy_title" ColumnName="Vacancy_title" />
+                <ScalarProperty Name="Career_level" ColumnName="Career_level" />
+                <ScalarProperty Name="Vacancy_No_of_Postions" ColumnName="Vacancy_No_of_Postions" />
+                <ScalarProperty Name="Salary_Range_from" ColumnName="Salary_Range_from" />
+                <ScalarProperty Name="Salary_Range_to" ColumnName="Salary_Range_to" />
+                <ScalarProperty Name="Functional_Area" ColumnName="Functional_Area" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_Vacancy_Locations">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_Vacancy_Locations">
+              <MappingFragment StoreEntitySet="Company_Vacancy_Locations">
+                <ScalarProperty Name="Vacancy_location_id" ColumnName="Vacancy_location_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+                <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+                <ScalarProperty Name="Vacancy_city" ColumnName="Vacancy_city" />
+                <ScalarProperty Name="Vacancy_Country" ColumnName="Vacancy_Country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_Vacancy_Questions">
+            <EntityTypeMapping TypeName="JobsPortalModel.Company_Vacancy_Questions">
+              <MappingFragment StoreEntitySet="Company_Vacancy_Questions">
+                <ScalarProperty Name="Vacancy_questions_id" ColumnName="Vacancy_questions_id" />
+                <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+                <ScalarProperty Name="Question" ColumnName="Question" />
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Compnay_FinalShortListed">
+            <EntityTypeMapping TypeName="JobsPortalModel.Compnay_FinalShortListed">
+              <MappingFragment StoreEntitySet="Compnay_FinalShortListed">
+                <ScalarProperty Name="Final_ShortListed_id" ColumnName="Final_ShortListed_id" />
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+                <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+                <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+                <ScalarProperty Name="ShortListes_Id" ColumnName="ShortListes_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="JobsPortalModel.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

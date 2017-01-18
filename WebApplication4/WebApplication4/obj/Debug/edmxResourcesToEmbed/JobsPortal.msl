@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JobsPortalModelStoreContainer" CdmEntityContainer="JobsPortalEntities">
+    <EntitySetMapping Name="Candidates">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate">
+        <MappingFragment StoreEntitySet="Candidate">
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="Email_Id" ColumnName="Email_Id" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+          <ScalarProperty Name="Functional_Area" ColumnName="Functional_Area" />
+          <ScalarProperty Name="Current_Sallery" ColumnName="Current_Sallery" />
+          <ScalarProperty Name="Education_level" ColumnName="Education_level" />
+          <ScalarProperty Name="Experience_Level" ColumnName="Experience_Level" />
+          <ScalarProperty Name="Desired_Salary_from" ColumnName="Desired_Salary_from" />
+          <ScalarProperty Name="Desired_Salary_to" ColumnName="Desired_Salary_to" />
+          <ScalarProperty Name="Current_Carrier_Level" ColumnName="Current_Carrier_Level" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="Birht_Place" ColumnName="Birht_Place" />
+          <ScalarProperty Name="Marital_Status" ColumnName="Marital_Status" />
+          <ScalarProperty Name="Father_Namer" ColumnName="Father_Namer" />
+          <ScalarProperty Name="Postal_Addres" ColumnName="Postal_Addres" />
+          <ScalarProperty Name="Permanent_Addres" ColumnName="Permanent_Addres" />
+          <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+          <ScalarProperty Name="Driving_Licience" ColumnName="Driving_Licience" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_Achievements">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Achievements">
+        <MappingFragment StoreEntitySet="Candidate_Achievements">
+          <ScalarProperty Name="Achievements_id" ColumnName="Achievements_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Achievement_title" ColumnName="Achievement_title" />
+          <ScalarProperty Name="Descritpion" ColumnName="Descritpion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_Courses">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Courses">
+        <MappingFragment StoreEntitySet="Candidate_Courses">
+          <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Course_Type" ColumnName="Course_Type" />
+          <ScalarProperty Name="Course_Start_Date" ColumnName="Course_Start_Date" />
+          <ScalarProperty Name="Course_End_Date" ColumnName="Course_End_Date" />
+          <ScalarProperty Name="Institute" ColumnName="Institute" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_Cover_Letter">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Cover_Letter">
+        <MappingFragment StoreEntitySet="Candidate_Cover_Letter">
+          <ScalarProperty Name="Cover_Letter_id" ColumnName="Cover_Letter_id" />
+          <ScalarProperty Name="Candidate_CV_Id" ColumnName="Candidate_CV_Id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Cover_Letter_file" ColumnName="Cover_Letter_file" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_CV">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_CV">
+        <MappingFragment StoreEntitySet="Candidate_CV">
+          <ScalarProperty Name="Candidate_CV_Id" ColumnName="Candidate_CV_Id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="CV_File" ColumnName="CV_File" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_desired_city">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_desired_city">
+        <MappingFragment StoreEntitySet="Candidate_desired_city">
+          <ScalarProperty Name="Desired_city_id" ColumnName="Desired_city_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Desired_city_name" ColumnName="Desired_city_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_Education">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Education">
+        <MappingFragment StoreEntitySet="Candidate_Education">
+          <ScalarProperty Name="Education_Id" ColumnName="Education_Id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Degree_Title" ColumnName="Degree_Title" />
+          <ScalarProperty Name="Degree_Type" ColumnName="Degree_Type" />
+          <ScalarProperty Name="Degree_Level" ColumnName="Degree_Level" />
+          <ScalarProperty Name="Institute" ColumnName="Institute" />
+          <ScalarProperty Name="Result_Type" ColumnName="Result_Type" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+          <ScalarProperty Name="Completion_Date" ColumnName="Completion_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_Education_Major_Subjects">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Education_Major_Subjects">
+        <MappingFragment StoreEntitySet="Candidate_Education_Major_Subjects">
+          <ScalarProperty Name="Major_Subject_id" ColumnName="Major_Subject_id" />
+          <ScalarProperty Name="Education_Id" ColumnName="Education_Id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Major_Subject" ColumnName="Major_Subject" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_Experience">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Experience">
+        <MappingFragment StoreEntitySet="Candidate_Experience">
+          <ScalarProperty Name="Experience_id" ColumnName="Experience_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Locaton" ColumnName="Locaton" />
+          <ScalarProperty Name="Start_From_date" ColumnName="Start_From_date" />
+          <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_Feedback">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Feedback">
+        <MappingFragment StoreEntitySet="Candidate_Feedback">
+          <ScalarProperty Name="Feedback_id" ColumnName="Feedback_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="feedback_type" ColumnName="feedback_type" />
+          <ScalarProperty Name="Feedback_Description" ColumnName="Feedback_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_Jobs_Appllied">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Jobs_Appllied">
+        <MappingFragment StoreEntitySet="Candidate_Jobs_Appllied">
+          <ScalarProperty Name="Jobs_Applied_id" ColumnName="Jobs_Applied_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Vacancy_id" ColumnName="Vacancy_id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Date_Applied" ColumnName="Date_Applied" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_Jobs_Types_Looking">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Jobs_Types_Looking">
+        <MappingFragment StoreEntitySet="Candidate_Jobs_Types_Looking">
+          <ScalarProperty Name="Jobs_type_id" ColumnName="Jobs_type_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Jobs_Title_looking" ColumnName="Jobs_Title_looking" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_Languages">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Languages">
+        <MappingFragment StoreEntitySet="Candidate_Languages">
+          <ScalarProperty Name="Language_id" ColumnName="Language_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Language_Name" ColumnName="Language_Name" />
+          <ScalarProperty Name="Proficiency" ColumnName="Proficiency" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_Professional_Skills">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Professional_Skills">
+        <MappingFragment StoreEntitySet="Candidate_Professional_Skills">
+          <ScalarProperty Name="Professional_Skills_id" ColumnName="Professional_Skills_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Skill_Name" ColumnName="Skill_Name" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_Projects">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Projects">
+        <MappingFragment StoreEntitySet="Candidate_Projects">
+          <ScalarProperty Name="Project_id" ColumnName="Project_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Project_Title" ColumnName="Project_Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Project_Url" ColumnName="Project_Url" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Assocication_with" ColumnName="Assocication_with" />
+          <ScalarProperty Name="Project_Start_date" ColumnName="Project_Start_date" />
+          <ScalarProperty Name="Project_End_Date" ColumnName="Project_End_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_Publications">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Publications">
+        <MappingFragment StoreEntitySet="Candidate_Publications">
+          <ScalarProperty Name="Publication_id" ColumnName="Publication_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Publication_title" ColumnName="Publication_title" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Publish_date" ColumnName="Publish_date" />
+          <ScalarProperty Name="Desciption" ColumnName="Desciption" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_Query">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Query">
+        <MappingFragment StoreEntitySet="Candidate_Query">
+          <ScalarProperty Name="Query_id" ColumnName="Query_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_Saved_Jobs">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Saved_Jobs">
+        <MappingFragment StoreEntitySet="Candidate_Saved_Jobs">
+          <ScalarProperty Name="Saved_Job_id" ColumnName="Saved_Job_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Vacancy_id" ColumnName="Vacancy_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidate_Specilization">
+      <EntityTypeMapping TypeName="JobsPortalModel.Candidate_Specilization">
+        <MappingFragment StoreEntitySet="Candidate_Specilization">
+          <ScalarProperty Name="Specilization_id" ColumnName="Specilization_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Specilization_title" ColumnName="Specilization_title" />
+          <ScalarProperty Name="Specilization_Description" ColumnName="Specilization_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_Admin">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_Admin">
+        <MappingFragment StoreEntitySet="Company_Admin">
+          <ScalarProperty Name="Company_Admin_id" ColumnName="Company_Admin_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Admin_Name" ColumnName="Admin_Name" />
+          <ScalarProperty Name="Admin_Email" ColumnName="Admin_Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+          <ScalarProperty Name="Vouchar_No" ColumnName="Vouchar_No" />
+          <ScalarProperty Name="Admin_Desingnation" ColumnName="Admin_Desingnation" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_Advertisments">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_Advertisments">
+        <MappingFragment StoreEntitySet="Company_Advertisments">
+          <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Advertisement_title" ColumnName="Advertisement_title" />
+          <ScalarProperty Name="AD_Date_Submission" ColumnName="AD_Date_Submission" />
+          <ScalarProperty Name="Ad_Expiry_Date" ColumnName="Ad_Expiry_Date" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Is_Allowed" ColumnName="Is_Allowed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_Education_Required">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_Education_Required">
+        <MappingFragment StoreEntitySet="Company_Education_Required">
+          <ScalarProperty Name="Education_Required_id" ColumnName="Education_Required_id" />
+          <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+          <ScalarProperty Name="Vancancy_id" ColumnName="Vancancy_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_Files">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_Files">
+        <MappingFragment StoreEntitySet="Company_Files">
+          <ScalarProperty Name="Company_Doc_id" ColumnName="Company_Doc_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Company_Doc" ColumnName="Company_Doc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_FunctionalArea">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_FunctionalArea">
+        <MappingFragment StoreEntitySet="Company_FunctionalArea">
+          <ScalarProperty Name="Company_FunctionalArea_id" ColumnName="Company_FunctionalArea_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Company_FunctionalArea1" ColumnName="Company_FunctionalArea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_Industry">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_Industry">
+        <MappingFragment StoreEntitySet="Company_Industry">
+          <ScalarProperty Name="Company_Industry_id" ColumnName="Company_Industry_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Industry" ColumnName="Industry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_Interview">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_Interview">
+        <MappingFragment StoreEntitySet="Company_Interview">
+          <ScalarProperty Name="Interview_id" ColumnName="Interview_id" />
+          <ScalarProperty Name="Compnay_id" ColumnName="Compnay_id" />
+          <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+          <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Interview_Remarks" ColumnName="Interview_Remarks" />
+          <ScalarProperty Name="Is_Selected" ColumnName="Is_Selected" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_jobs_realted_skills">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_jobs_realted_skills">
+        <MappingFragment StoreEntitySet="Company_jobs_realted_skills">
+          <ScalarProperty Name="Company_jobs_related_skil_id" ColumnName="Company_jobs_related_skil_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Skill_title" ColumnName="Skill_title" />
+          <ScalarProperty Name="skills_discription" ColumnName="skills_discription" />
+          <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+          <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_Locations">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_Locations">
+        <MappingFragment StoreEntitySet="Company_Locations">
+          <ScalarProperty Name="Company_Location_id" ColumnName="Company_Location_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_phone_No">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_phone_No">
+        <MappingFragment StoreEntitySet="Company_phone_No">
+          <ScalarProperty Name="Company_phone_id" ColumnName="Company_phone_id" />
+          <ScalarProperty Name="Company_Location_id" ColumnName="Company_Location_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Phone_no" ColumnName="Phone_no" />
+          <ScalarProperty Name="Fax_no" ColumnName="Fax_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_Profile">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_Profile">
+        <MappingFragment StoreEntitySet="Company_Profile">
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+          <ScalarProperty Name="Company_Since" ColumnName="Company_Since" />
+          <ScalarProperty Name="Company_Website" ColumnName="Company_Website" />
+          <ScalarProperty Name="Company_Employess" ColumnName="Company_Employess" />
+          <ScalarProperty Name="Company_Description" ColumnName="Company_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_Question_Choices">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_Question_Choices">
+        <MappingFragment StoreEntitySet="Company_Question_Choices">
+          <ScalarProperty Name="Qeustion_Choices_id" ColumnName="Qeustion_Choices_id" />
+          <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+          <ScalarProperty Name="Vacancy_questions_id" ColumnName="Vacancy_questions_id" />
+          <ScalarProperty Name="Choice" ColumnName="Choice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_Selected_Recieved_Applications">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_Selected_Recieved_Applications">
+        <MappingFragment StoreEntitySet="Company_Selected_Recieved_Applications">
+          <ScalarProperty Name="Selected_Recieved_Applic_id" ColumnName="Selected_Recieved_Applic_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+          <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Selected_Date" ColumnName="Selected_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_Services">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_Services">
+        <MappingFragment StoreEntitySet="Company_Services">
+          <ScalarProperty Name="Company_Service_id" ColumnName="Company_Service_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Service_Type" ColumnName="Service_Type" />
+          <ScalarProperty Name="Service_Discritpion" ColumnName="Service_Discritpion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_SharedAdd_Media">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_SharedAdd_Media">
+        <MappingFragment StoreEntitySet="Company_SharedAdd_Media">
+          <ScalarProperty Name="Media_Shared_id" ColumnName="Media_Shared_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Shared_Date" ColumnName="Shared_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_ShortListed">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_ShortListed">
+        <MappingFragment StoreEntitySet="Company_ShortListed">
+          <ScalarProperty Name="ShortListes_Id" ColumnName="ShortListes_Id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+          <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+          <ScalarProperty Name="Shorlisted_Date" ColumnName="Shorlisted_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_Tests">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_Tests">
+        <MappingFragment StoreEntitySet="Company_Tests">
+          <ScalarProperty Name="Test_id" ColumnName="Test_id" />
+          <ScalarProperty Name="Compnay_id" ColumnName="Compnay_id" />
+          <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+          <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Test_Desc" ColumnName="Test_Desc" />
+          <ScalarProperty Name="Is_Selected" ColumnName="Is_Selected" />
+          <ScalarProperty Name="Total_Marks" ColumnName="Total_Marks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_Vacancies">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_Vacancies">
+        <MappingFragment StoreEntitySet="Company_Vacancies">
+          <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+          <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Discription" ColumnName="Discription" />
+          <ScalarProperty Name="Vacancy_title" ColumnName="Vacancy_title" />
+          <ScalarProperty Name="Career_level" ColumnName="Career_level" />
+          <ScalarProperty Name="Vacancy_No_of_Postions" ColumnName="Vacancy_No_of_Postions" />
+          <ScalarProperty Name="Salary_Range_from" ColumnName="Salary_Range_from" />
+          <ScalarProperty Name="Salary_Range_to" ColumnName="Salary_Range_to" />
+          <ScalarProperty Name="Functional_Area" ColumnName="Functional_Area" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_Vacancy_Locations">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_Vacancy_Locations">
+        <MappingFragment StoreEntitySet="Company_Vacancy_Locations">
+          <ScalarProperty Name="Vacancy_location_id" ColumnName="Vacancy_location_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+          <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+          <ScalarProperty Name="Vacancy_city" ColumnName="Vacancy_city" />
+          <ScalarProperty Name="Vacancy_Country" ColumnName="Vacancy_Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company_Vacancy_Questions">
+      <EntityTypeMapping TypeName="JobsPortalModel.Company_Vacancy_Questions">
+        <MappingFragment StoreEntitySet="Company_Vacancy_Questions">
+          <ScalarProperty Name="Vacancy_questions_id" ColumnName="Vacancy_questions_id" />
+          <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Compnay_FinalShortListed">
+      <EntityTypeMapping TypeName="JobsPortalModel.Compnay_FinalShortListed">
+        <MappingFragment StoreEntitySet="Compnay_FinalShortListed">
+          <ScalarProperty Name="Final_ShortListed_id" ColumnName="Final_ShortListed_id" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Candidate_id" ColumnName="Candidate_id" />
+          <ScalarProperty Name="Company_Vacancy_id" ColumnName="Company_Vacancy_id" />
+          <ScalarProperty Name="Advertisement_id" ColumnName="Advertisement_id" />
+          <ScalarProperty Name="ShortListes_Id" ColumnName="ShortListes_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="JobsPortalModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

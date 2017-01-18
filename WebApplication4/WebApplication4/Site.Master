@@ -1,0 +1,172 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication4.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Jobs Portal</title>
+
+ 
+    
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+<!--css-->
+<link href="Content/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="Content/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!--css-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Home Plat Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link rel="stylesheet" href="Content/css/flexslider.css" type="text/css" media="screen" />
+<!--js-->
+<script src="Content/js/jquery.min.js"></script>
+<script src="Content/js/bootstrap.min.js"></script>
+<!--js-->
+<!--webfonts-->
+<link href='//fonts.googleapis.com/css?family=Josefin+Sans:400,700italic,700,600italic,600,400italic,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!--webfonts-->
+<script src="Content/js/responsiveslides.min.js"></script>
+ <script>
+     $(function () {
+         $("#slider").responsiveSlides({
+             auto: true,
+             nav: true,
+             speed: 500,
+             namespace: "callbacks",
+             pager: true,
+         });
+     });
+  </script>
+  <link href="Content/css/owl.carousel.css" rel="stylesheet">
+<script src="Content/js/owl.carousel.js"></script>
+	<script>
+	    $(document).ready(function () {
+	        $("#owl-demo").owlCarousel({
+	            items: 1,
+	            lazyLoad: true,
+	            autoPlay: true,
+	            navigation: false,
+	            navigationText: false,
+	            pagination: true,
+	        });
+	    });
+	</script>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form runat="server">
+    
+    <header>
+        <div class="header" id="home">
+			<div class="header-top">
+				<div class="container">
+					<div class="head-top">
+						<div class="indicate">
+							<i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i><a href="#">F11/Markaz,Sughra tower #209.Islamabad</a>
+						</div>
+						<div class="deatils">
+							<ul>
+								<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="#" data-toggle="modal" data-target="#myModal"><font size="4">Sign In</font></a></li>
+								<li><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></li>
+							</ul>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="logo">
+						<h1><a href="index.html">Jobs Portal<span>National International</span></a></h1>
+					</div>
+				</div>
+			</div>
+		<div class="container">
+			<div class="header-bottom">
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<nav class="menu menu--francisco">
+								<ul class="nav navbar-nav menu__list">
+									<li class="menu__item menu__item--current"><a href="index.html" class="menu__link"><span class="menu__helper"><font size="6">Home</font></span></a></li>
+									<li class="menu__item"><a href="Candidate/Employee" class="menu__link"><span class="menu__helper"><font size="6">Jobs Finder</font></span></a></li>
+									<li class="menu__item"><a href="services.html" class="menu__link"><span class="menu__helper"><font size="6">Employer</font></span></a></li>
+									<li class="menu__item"><a href="codes.html" class="menu__link"><span class="menu__helper">Codes</span></a></li>
+									<li class="menu__item"><a href="projects.html" class="menu__link"><span class="menu__helper">Projects</span></a></li>
+									<li class="menu__item"><a href="contact.html" class="menu__link"><span class="menu__helper">Contact</span></a></li>
+								</ul>
+							</nav>
+								<div class="social-icons">
+			<a href="https://www.facebook.com/"><i class="icon"></i></a>
+			<a href="https://twitter.com/"><i class="icon1"></i></a>
+			<a href="https://plus.google.com/"><i class="icon2"></i></a>
+			<a href="https://www.linkedin.com/"><i class="icon3"></i></a>
+								</div>
+							<div class="clearfix"></div>
+						</div><!-- /.navbar-collapse -->
+							<!-- /.container-fluid -->
+					</div>
+				</nav>
+
+			</div>	
+		</div>
+	</div>
+	<!--header-->
+	<!--banner-->
+		<div class="banner-section">
+		<div class="slider">
+			<div class="callbacks_container">
+				<ul class="rslides" id="slider">
+					<li>
+					  <img src="Content/images/ba1.jpg" alt="">
+					 <div class="caption">
+						<h3>The home of your dream job</h3>
+						<p>More than a job…it’s an adventure in innovation.</p>
+					 </div>
+					</li>
+					<li>
+					  <img src="Content/images/ba2.jpg" alt="">
+						<div class="caption">
+						<h3>Exceed your potential… come join us!</h3>
+						<p>We will challenge you to do the best work of your life.</p>
+					</div>
+					</li><li>
+					  <img src="Content/images/slide3.jpg" alt="">
+						<div class="caption">
+						<h3>We are problem solvers</h3>
+						<p>You do not have the right to remain silent… let us know what it takes to challenge you.</p>
+					</div>
+					</li>
+				</ul>
+		  </div>
+	  </div>
+	</div>
+    <div id="body">
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            </div>
+        </div>
+    </footer>
+    </form>
+</body>
+</html>

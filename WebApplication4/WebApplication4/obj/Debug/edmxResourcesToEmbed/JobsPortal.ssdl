@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JobsPortalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Candidate">
+    <Key>
+      <PropertyRef Name="Candidate_id" />
+    </Key>
+    <Property Name="Candidate_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Last_Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email_Id" Type="nvarchar" MaxLength="100" />
+    <Property Name="DOB" Type="nvarchar" MaxLength="100" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nationality" Type="nvarchar" MaxLength="100" />
+    <Property Name="Mobile_No" Type="int" />
+    <Property Name="Functional_Area" Type="nvarchar" MaxLength="100" />
+    <Property Name="Current_Sallery" Type="int" />
+    <Property Name="Education_level" Type="nvarchar" MaxLength="100" />
+    <Property Name="Experience_Level" Type="nvarchar" MaxLength="100" />
+    <Property Name="Desired_Salary_from" Type="nchar" MaxLength="10" />
+    <Property Name="Desired_Salary_to" Type="nvarchar" MaxLength="100" />
+    <Property Name="Current_Carrier_Level" Type="nvarchar" MaxLength="100" />
+    <Property Name="Religion" Type="nvarchar" MaxLength="50" />
+    <Property Name="Birht_Place" Type="nvarchar" MaxLength="100" />
+    <Property Name="Marital_Status" Type="nvarchar" MaxLength="100" />
+    <Property Name="Father_Namer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Postal_Addres" Type="nvarchar" MaxLength="100" />
+    <Property Name="Permanent_Addres" Type="nvarchar" MaxLength="100" />
+    <Property Name="CNIC" Type="nvarchar" MaxLength="100" />
+    <Property Name="Driving_Licience" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Candidate_Achievements">
+    <Key>
+      <PropertyRef Name="Achievements_id" />
+    </Key>
+    <Property Name="Achievements_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Achievement_title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Descritpion" Type="nvarchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="Candidate_Courses">
+    <Key>
+      <PropertyRef Name="Course_id" />
+    </Key>
+    <Property Name="Course_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Course_Type" Type="nvarchar" MaxLength="200" />
+    <Property Name="Course_Start_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="Course_End_Date" Type="nchar" MaxLength="10" />
+    <Property Name="Institute" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Candidate_Cover_Letter">
+    <Key>
+      <PropertyRef Name="Cover_Letter_id" />
+    </Key>
+    <Property Name="Cover_Letter_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_CV_Id" Type="int" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Cover_Letter_file" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Candidate_CV">
+    <Key>
+      <PropertyRef Name="Candidate_CV_Id" />
+    </Key>
+    <Property Name="Candidate_CV_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="CV_File" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Candidate_desired_city">
+    <Key>
+      <PropertyRef Name="Desired_city_id" />
+    </Key>
+    <Property Name="Desired_city_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Desired_city_name" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Candidate_Education">
+    <Key>
+      <PropertyRef Name="Education_Id" />
+    </Key>
+    <Property Name="Education_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Degree_Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Degree_Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Degree_Level" Type="nvarchar" MaxLength="100" />
+    <Property Name="Institute" Type="nvarchar" MaxLength="200" />
+    <Property Name="Result_Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Start_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="Completion_Date" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Candidate_Education_Major_Subjects">
+    <Key>
+      <PropertyRef Name="Major_Subject_id" />
+    </Key>
+    <Property Name="Major_Subject_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Education_Id" Type="int" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Major_Subject" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Candidate_Experience">
+    <Key>
+      <PropertyRef Name="Experience_id" />
+    </Key>
+    <Property Name="Experience_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Company" Type="nvarchar" MaxLength="100" />
+    <Property Name="Locaton" Type="nvarchar" MaxLength="300" />
+    <Property Name="Start_From_date" Type="nvarchar" MaxLength="100" />
+    <Property Name="End_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Status" Type="nvarchar" MaxLength="100" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="100" />
+    <Property Name="Salary" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Candidate_Feedback">
+    <Key>
+      <PropertyRef Name="Feedback_id" />
+    </Key>
+    <Property Name="Feedback_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="feedback_type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Feedback_Description" Type="nvarchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="Candidate_Jobs_Appllied">
+    <Key>
+      <PropertyRef Name="Jobs_Applied_id" />
+    </Key>
+    <Property Name="Jobs_Applied_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Vacancy_id" Type="int" />
+    <Property Name="Status" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Date_Applied" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Candidate_Jobs_Types_Looking">
+    <Key>
+      <PropertyRef Name="Jobs_type_id" />
+    </Key>
+    <Property Name="Jobs_type_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Jobs_Title_looking" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Candidate_Languages">
+    <Key>
+      <PropertyRef Name="Language_id" />
+    </Key>
+    <Property Name="Language_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Language_Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Proficiency" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Candidate_Professional_Skills">
+    <Key>
+      <PropertyRef Name="Professional_Skills_id" />
+    </Key>
+    <Property Name="Professional_Skills_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Skill_Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Experience" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Candidate_Projects">
+    <Key>
+      <PropertyRef Name="Project_id" />
+    </Key>
+    <Property Name="Project_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Project_Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Project_Url" Type="nvarchar" MaxLength="200" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="Assocication_with" Type="nvarchar" MaxLength="100" />
+    <Property Name="Project_Start_date" Type="nvarchar" MaxLength="100" />
+    <Property Name="Project_End_Date" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Candidate_Publications">
+    <Key>
+      <PropertyRef Name="Publication_id" />
+    </Key>
+    <Property Name="Publication_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Publication_title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Author" Type="nvarchar" MaxLength="100" />
+    <Property Name="Publish_date" Type="nvarchar" MaxLength="100" />
+    <Property Name="Desciption" Type="nvarchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="Candidate_Query">
+    <Key>
+      <PropertyRef Name="Query_id" />
+    </Key>
+    <Property Name="Query_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Message" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Candidate_Saved_Jobs">
+    <Key>
+      <PropertyRef Name="Saved_Job_id" />
+    </Key>
+    <Property Name="Saved_Job_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Vacancy_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Candidate_Specilization">
+    <Key>
+      <PropertyRef Name="Specilization_id" />
+    </Key>
+    <Property Name="Specilization_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Specilization_title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Specilization_Description" Type="nvarchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="Company_Admin">
+    <Key>
+      <PropertyRef Name="Company_Admin_id" />
+    </Key>
+    <Property Name="Company_Admin_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Admin_Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Admin_Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="Password" Type="nvarchar" MaxLength="200" />
+    <Property Name="Phone_No" Type="int" />
+    <Property Name="Vouchar_No" Type="int" />
+    <Property Name="Admin_Desingnation" Type="nvarchar" MaxLength="200" />
+    <Property Name="Status" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Company_Advertisments">
+    <Key>
+      <PropertyRef Name="Advertisement_id" />
+    </Key>
+    <Property Name="Advertisement_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Advertisement_title" Type="nvarchar" MaxLength="200" />
+    <Property Name="AD_Date_Submission" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ad_Expiry_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="Is_Allowed" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Company_Education_Required">
+    <Key>
+      <PropertyRef Name="Education_Required_id" />
+    </Key>
+    <Property Name="Education_Required_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Advertisement_id" Type="int" />
+    <Property Name="Vancancy_id" Type="int" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Education" Type="nchar" MaxLength="10" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Company_Files">
+    <Key>
+      <PropertyRef Name="Company_Doc_id" />
+    </Key>
+    <Property Name="Company_Doc_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Company_Doc" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Company_FunctionalArea">
+    <Key>
+      <PropertyRef Name="Company_FunctionalArea_id" />
+    </Key>
+    <Property Name="Company_FunctionalArea_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Company_FunctionalArea" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Company_Industry">
+    <Key>
+      <PropertyRef Name="Company_Industry_id" />
+    </Key>
+    <Property Name="Company_Industry_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Industry" Type="int" />
+  </EntityType>
+  <EntityType Name="Company_Interview">
+    <Key>
+      <PropertyRef Name="Interview_id" />
+    </Key>
+    <Property Name="Interview_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Compnay_id" Type="int" />
+    <Property Name="Company_Vacancy_id" Type="int" />
+    <Property Name="Advertisement_id" Type="int" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Status" Type="nvarchar" MaxLength="100" />
+    <Property Name="Interview_Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="Is_Selected" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Company_jobs_realted_skills">
+    <Key>
+      <PropertyRef Name="Company_jobs_related_skil_id" />
+    </Key>
+    <Property Name="Company_jobs_related_skil_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Skill_title" Type="nvarchar" MaxLength="520" />
+    <Property Name="skills_discription" Type="nvarchar" MaxLength="500" />
+    <Property Name="Company_Vacancy_id" Type="int" />
+    <Property Name="Advertisement_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Company_Locations">
+    <Key>
+      <PropertyRef Name="Company_Location_id" />
+    </Key>
+    <Property Name="Company_Location_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Country" Type="nvarchar" MaxLength="100" />
+    <Property Name="City" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Company_phone_No">
+    <Key>
+      <PropertyRef Name="Company_phone_id" />
+    </Key>
+    <Property Name="Company_phone_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_Location_id" Type="int" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Phone_no" Type="int" />
+    <Property Name="Fax_no" Type="int" />
+  </EntityType>
+  <EntityType Name="Company_Profile">
+    <Key>
+      <PropertyRef Name="Company_id" />
+    </Key>
+    <Property Name="Company_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Company_Since" Type="nvarchar" MaxLength="50" />
+    <Property Name="Company_Website" Type="nvarchar" MaxLength="500" />
+    <Property Name="Company_Employess" Type="nvarchar" MaxLength="200" />
+    <Property Name="Company_Description" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Company_Question_Choices">
+    <Key>
+      <PropertyRef Name="Qeustion_Choices_id" />
+    </Key>
+    <Property Name="Qeustion_Choices_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_Vacancy_id" Type="int" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Advertisement_id" Type="int" />
+    <Property Name="Vacancy_questions_id" Type="int" />
+    <Property Name="Choice" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Company_Selected_Recieved_Applications">
+    <Key>
+      <PropertyRef Name="Selected_Recieved_Applic_id" />
+    </Key>
+    <Property Name="Selected_Recieved_Applic_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Advertisement_id" Type="int" />
+    <Property Name="Company_Vacancy_id" Type="int" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Selected_Date" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Company_Services">
+    <Key>
+      <PropertyRef Name="Company_Service_id" />
+    </Key>
+    <Property Name="Company_Service_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Service_Type" Type="nvarchar" MaxLength="200" />
+    <Property Name="Service_Discritpion" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Company_SharedAdd_Media">
+    <Key>
+      <PropertyRef Name="Media_Shared_id" />
+    </Key>
+    <Property Name="Media_Shared_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Media" Type="nvarchar" MaxLength="300" />
+    <Property Name="Link" Type="nvarchar" MaxLength="300" />
+    <Property Name="Shared_Date" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Company_ShortListed">
+    <Key>
+      <PropertyRef Name="ShortListes_Id" />
+    </Key>
+    <Property Name="ShortListes_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Company_Vacancy_id" Type="int" />
+    <Property Name="Advertisement_id" Type="int" />
+    <Property Name="Shorlisted_Date" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Company_Tests">
+    <Key>
+      <PropertyRef Name="Test_id" />
+    </Key>
+    <Property Name="Test_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Compnay_id" Type="int" />
+    <Property Name="Company_Vacancy_id" Type="int" />
+    <Property Name="Advertisement_id" Type="int" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="Test_Desc" Type="nvarchar" MaxLength="500" />
+    <Property Name="Is_Selected" Type="int" />
+    <Property Name="Total_Marks" Type="int" />
+  </EntityType>
+  <EntityType Name="Company_Vacancies">
+    <Key>
+      <PropertyRef Name="Company_Vacancy_id" />
+    </Key>
+    <Property Name="Company_Vacancy_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Advertisement_id" Type="int" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Discription" Type="nvarchar" MaxLength="200" />
+    <Property Name="Vacancy_title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Career_level" Type="nvarchar" MaxLength="200" />
+    <Property Name="Vacancy_No_of_Postions" Type="int" />
+    <Property Name="Salary_Range_from" Type="int" />
+    <Property Name="Salary_Range_to" Type="int" />
+    <Property Name="Functional_Area" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Company_Vacancy_Locations">
+    <Key>
+      <PropertyRef Name="Vacancy_location_id" />
+    </Key>
+    <Property Name="Vacancy_location_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Advertisement_id" Type="int" />
+    <Property Name="Company_Vacancy_id" Type="int" />
+    <Property Name="Vacancy_city" Type="nvarchar" MaxLength="300" />
+    <Property Name="Vacancy_Country" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Company_Vacancy_Questions">
+    <Key>
+      <PropertyRef Name="Vacancy_questions_id" />
+    </Key>
+    <Property Name="Vacancy_questions_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Advertisement_id" Type="int" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Company_Vacancy_id" Type="int" />
+    <Property Name="Question" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Answer" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Compnay_FinalShortListed">
+    <Key>
+      <PropertyRef Name="Final_ShortListed_id" />
+    </Key>
+    <Property Name="Final_ShortListed_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_id" Type="int" />
+    <Property Name="Candidate_id" Type="int" />
+    <Property Name="Company_Vacancy_id" Type="int" />
+    <Property Name="Advertisement_id" Type="int" />
+    <Property Name="ShortListes_Id" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JobsPortal.dbo.Country' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="CountryName" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="JobsPortalModelStoreContainer">
+    <EntitySet Name="Candidate" EntityType="Self.Candidate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_Achievements" EntityType="Self.Candidate_Achievements" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_Courses" EntityType="Self.Candidate_Courses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_Cover_Letter" EntityType="Self.Candidate_Cover_Letter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_CV" EntityType="Self.Candidate_CV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_desired_city" EntityType="Self.Candidate_desired_city" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_Education" EntityType="Self.Candidate_Education" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_Education_Major_Subjects" EntityType="Self.Candidate_Education_Major_Subjects" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_Experience" EntityType="Self.Candidate_Experience" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_Feedback" EntityType="Self.Candidate_Feedback" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_Jobs_Appllied" EntityType="Self.Candidate_Jobs_Appllied" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_Jobs_Types_Looking" EntityType="Self.Candidate_Jobs_Types_Looking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_Languages" EntityType="Self.Candidate_Languages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_Professional_Skills" EntityType="Self.Candidate_Professional_Skills" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_Projects" EntityType="Self.Candidate_Projects" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_Publications" EntityType="Self.Candidate_Publications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_Query" EntityType="Self.Candidate_Query" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_Saved_Jobs" EntityType="Self.Candidate_Saved_Jobs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_Specilization" EntityType="Self.Candidate_Specilization" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_Admin" EntityType="Self.Company_Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_Advertisments" EntityType="Self.Company_Advertisments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_Education_Required" EntityType="Self.Company_Education_Required" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_Files" EntityType="Self.Company_Files" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_FunctionalArea" EntityType="Self.Company_FunctionalArea" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_Industry" EntityType="Self.Company_Industry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_Interview" EntityType="Self.Company_Interview" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_jobs_realted_skills" EntityType="Self.Company_jobs_realted_skills" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_Locations" EntityType="Self.Company_Locations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_phone_No" EntityType="Self.Company_phone_No" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_Profile" EntityType="Self.Company_Profile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_Question_Choices" EntityType="Self.Company_Question_Choices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_Selected_Recieved_Applications" EntityType="Self.Company_Selected_Recieved_Applications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_Services" EntityType="Self.Company_Services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_SharedAdd_Media" EntityType="Self.Company_SharedAdd_Media" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_ShortListed" EntityType="Self.Company_ShortListed" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_Tests" EntityType="Self.Company_Tests" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_Vacancies" EntityType="Self.Company_Vacancies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_Vacancy_Locations" EntityType="Self.Company_Vacancy_Locations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_Vacancy_Questions" EntityType="Self.Company_Vacancy_Questions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Compnay_FinalShortListed" EntityType="Self.Compnay_FinalShortListed" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Country" EntityType="Self.Country" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Country].[ID] AS [ID], 
+[Country].[CountryName] AS [CountryName]
+FROM [dbo].[Country] AS [Country]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

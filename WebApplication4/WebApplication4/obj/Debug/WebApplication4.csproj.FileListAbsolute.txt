@@ -1,0 +1,67 @@
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\WebApplication4.dll.config
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\WebApplication4.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\WebApplication4.pdb
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\Antlr3.Runtime.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\AspNet.ScriptManager.jQuery.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\DotNetOpenAuth.AspNet.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\DotNetOpenAuth.Core.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\DotNetOpenAuth.OAuth.Consumer.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\DotNetOpenAuth.OAuth.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\DotNetOpenAuth.OpenId.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\EntityFramework.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\Microsoft.AspNet.FriendlyUrls.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\Microsoft.ScriptManager.MSAjax.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\Microsoft.ScriptManager.WebForms.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\Microsoft.Web.Infrastructure.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\System.Web.Optimization.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\System.Web.Providers.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\WebGrease.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\EntityFramework.xml
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\DotNetOpenAuth.Core.xml
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\DotNetOpenAuth.OAuth.xml
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\DotNetOpenAuth.OAuth.Consumer.xml
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\DotNetOpenAuth.OpenId.xml
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\DotNetOpenAuth.AspNet.xml
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\bin\Microsoft.AspNet.FriendlyUrls.xml
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.dll
+c:\users\usamach\documents\visual studio 2013\Projects\WebApplication4\WebApplication4\obj\Debug\WebApplication4.pdb
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\WebApplication4.dll.config
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\WebApplication4.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\WebApplication4.pdb
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\Antlr3.Runtime.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\AspNet.ScriptManager.jQuery.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\DotNetOpenAuth.AspNet.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\DotNetOpenAuth.Core.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\DotNetOpenAuth.OAuth.Consumer.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\DotNetOpenAuth.OAuth.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\DotNetOpenAuth.OpenId.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\EntityFramework.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\Microsoft.AspNet.FriendlyUrls.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\Microsoft.ScriptManager.MSAjax.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\Microsoft.ScriptManager.WebForms.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\Microsoft.Web.Infrastructure.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\System.Web.Optimization.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\System.Web.Providers.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\WebGrease.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\EntityFramework.xml
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\DotNetOpenAuth.Core.xml
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\DotNetOpenAuth.OAuth.xml
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\DotNetOpenAuth.OAuth.Consumer.xml
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\DotNetOpenAuth.OpenId.xml
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\DotNetOpenAuth.AspNet.xml
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\bin\Microsoft.AspNet.FriendlyUrls.xml
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csprojResolveAssemblyReference.cache
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\obj\Debug\WebApplication4.dll
+G:\Office work\ProjectRepositry\WebApplication4\WebApplication4\obj\Debug\WebApplication4.pdb
